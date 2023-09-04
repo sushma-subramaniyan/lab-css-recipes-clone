@@ -5,7 +5,7 @@ html {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*0, *:0, *:1{
   box-sizing: inherit;
 }
 
@@ -18,7 +18,91 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 /*  Set the font */
 body {
   font-family: "Helvetica", sans-serif;
+  width: 698px;
+    height: 600px;
+
 }
 
 /* STYLES */
 /* Write your CSS below */
+
+ol {
+  counter-reset: list;
+}
+ol > li {
+  list-style: none;
+}
+ol > li:before {
+  content: counter(list) ") ";
+  counter-increment: list;
+}
+h1{
+  font-size: 5em;
+  text-align: center;
+  padding-top: 50px;
+  
+}
+.header img{
+  height:650px;
+  background-position:0 0;
+  background-size:cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  position: relative;
+  
+}
+hr{
+  margin: 20px auto 30px auto;
+  width: 100%;
+}
+p{
+  margin: 20px;
+}
+#recipe img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  
+
+}
+#ingredients img{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+.header{
+  position: absolute;
+  top: -4rem;
+  left: 20%;
+  text-transform: translate(-50%, -50%);
+  position: relative;
+  text-align: center;
+}
+.recipe{
+  position: absolute;
+  top: -3rem;
+  left: 20%;
+  text-transform: translate(-50%, -50%);
+  position: relative;
+
+}
+#ingredients{
+  left: 3%;
+  position: relative;
+
+}
+#directions{
+  padding-bottom: 20px;
+  left: 20%;
+}
+
+.text-container {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  left: 13rem;
+  top: 18rem;
+  padding: 0 1rem;
+}
